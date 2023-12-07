@@ -1,5 +1,5 @@
 # Gaussian Head Avatar: Ultra High-fidelity Head Avatar via Dynamic Gaussians
-## [Paper] | [Project Page](https://yuelangx.github.io/gaussianheadavatar/)
+## [Paper](https://arxiv.org/abs/2312.03029) | [Project Page](https://yuelangx.github.io/gaussianheadavatar/)
 
 
 ## Citation
