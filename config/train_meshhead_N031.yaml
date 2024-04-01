@@ -1,0 +1,34 @@
+gpu_id: 0
+load_meshhead_checkpoint: 'checkpoints/meshhead_NeRSemble031/meshhead_latest'
+lr_net: 1e-3
+lr_lmk: 1e-4
+batch_size: 1
+
+dataset:
+  dataroot: 'mini_demo_dataset/031'
+  camera_ids: ['220700191', '221501007', '222200036', '222200037', '222200038', '222200039', '222200040', '222200041',
+               '222200042', '222200043', '222200044', '222200045', '222200046', '222200047', '222200048', '222200049']
+  original_resolution: 2048
+  resolution: 256
+  num_sample_view: 4
+
+meshheadmodule:
+  geo_mlp: [27, 256, 256, 256, 256, 256, 132]
+  exp_color_mlp: [192, 256, 256, 32]
+  pose_color_mlp: [182, 128, 32]
+  exp_deform_mlp: [91, 256, 256, 256, 256, 256, 3]
+  pose_deform_mlp: [81, 256, 256, 3]
+  pos_freq: 4
+  model_bbox: [[-1.6, 1.6], [-1.7, 1.8], [-2.5, 1.0]]
+  dist_threshold_near: 0.1
+  dist_threshold_far: 0.25
+  deform_scale: 0.3
+  subdivide: False
+
+recorder:
+  name: 'meshhead_NeRSemble031'
+  logdir: 'log/meshhead_NeRSemble031'
+  checkpoint_path: 'checkpoints'
+  result_path: 'results'
+  save_freq: 1000
+  show_freq: 100

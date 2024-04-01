@@ -1,0 +1,37 @@
+gpu_id: 0
+load_supres_checkpoint: 'checkpoints/gaussianhead_NeRSemble031/supres_latest'
+load_gaussianhead_checkpoint: 'checkpoints/gaussianhead_NeRSemble031/gaussianhead_latest'
+
+dataset:
+  dataroot: 'mini_demo_dataset/036'
+  image_files: 'images/*/image_222200037.jpg'
+  param_files: 'params/*/params.npz'
+  camera_path: 'mini_demo_dataset/031/cameras/0000/camera_222200037.npz'
+  pose_code_path: 'mini_demo_dataset/031/params/0000/params.npz'
+  freeview: True
+  resolution: 2048
+  original_resolution: 2048
+
+supresmodule:
+  input_dim: 32
+  output_dim: 3
+  network_capacity: 32
+
+gaussianheadmodule:
+  num_add_mouth_points: 3000
+  exp_color_mlp: [192, 256, 256, 32]
+  pose_color_mlp: [182, 128, 32]
+  exp_deform_mlp: [91, 256, 256, 256, 256, 256, 3]
+  pose_deform_mlp: [81, 256, 256, 3]
+  exp_attributes_mlp: [192, 256, 256, 256, 8]
+  pose_attributes_mlp: [182, 128, 128, 8]
+  exp_coeffs_dim: 64
+  pos_freq: 4
+  dist_threshold_near: 0.1
+  dist_threshold_far: 0.25
+  deform_scale: 0.3
+  attributes_scale: 0.2
+
+recorder:
+  name: 'N031_to_N036_freeview'
+  result_path: 'results/reenactment'
