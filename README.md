@@ -26,7 +26,7 @@ pip install submodules/simple-knn
 
 
 ## Datasets
-We provide a [mini demo dataset](https://cloud.tsinghua.edu.cn/f/9c7345f71fb644818ef6/?dl=1) from [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/). Please download it for checking whether the code is runnable.
+We provide a [mini demo dataset](https://cloud.tsinghua.edu.cn/f/9c7345f71fb644818ef6/?dl=1) [(Google Drive)](https://drive.google.com/file/d/1OddIml-gJgRQU4YEP-T6USzIQyKSaF7I/view?usp=drive_link) from [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/). Please download it for checking whether the code is runnable.
 
 If you need to preprocess full [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/) or a customized dataset:
 * Download [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/) and unzip it into "path/to/raw_NeRSemble/".
