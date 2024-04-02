@@ -27,7 +27,7 @@ pip install submodules/simple-knn
 
 ## Datasets
 We provide instructions for preprocessing [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/):
-* Apply to download [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/) and unzip it into "path/to/raw_NeRSemble/".
+* Apply to download [NeRSemble dataset](https://tobias-kirschstein.github.io/nersemble/) and unzip it into "path/to/raw_NeRSemble/". If you just need to test whether the code is runnable, you could first download part of the dataset.
 * Extract the images, cameras and background for specific identities into a structured dataset "NeRSemble/{id}".
 ```
 cd preprocess
