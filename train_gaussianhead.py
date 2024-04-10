@@ -26,6 +26,7 @@ if __name__ == '__main__':
     dataloader = DataLoaderX(dataset, batch_size=cfg.batch_size, shuffle=True, pin_memory=True) 
 
     device = torch.device('cuda:%d' % cfg.gpu_id)
+    torch.cuda.set_device(cfg.gpu_id)
     
     if os.path.exists(cfg.load_gaussianhead_checkpoint):
         gaussianhead_state_dict = torch.load(cfg.load_gaussianhead_checkpoint, map_location=lambda storage, loc: storage)
