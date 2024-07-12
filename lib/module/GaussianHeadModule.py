@@ -112,7 +112,7 @@ class GaussianHeadModule(nn.Module):
 
         delta_rotation = delta_attributes[:, :, 3:7]
         rotation = self.rotation.unsqueeze(0).repeat(B, 1, 1) + delta_rotation * self.attributes_scale
-        rotation = torch.nn.functional.normalize(rotation)
+        rotation = torch.nn.functional.normalize(rotation, dim=2)
 
         delta_opacity = delta_attributes[:, :, 7:8]
         opacity = self.opacity.unsqueeze(0).repeat(B, 1, 1) + delta_opacity * self.attributes_scale
